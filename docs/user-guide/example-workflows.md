@@ -34,7 +34,7 @@ jobs:
       - name: Jenkins pipeline in the container
         id: jenkins_pipeline_container
         uses:
-          Cr1t-GYM/jenkins-action-poc/jfr-container-action@master
+          jenkinsci/jfr-container-action@master
         with:
           command: run
           jenkinsfile: Jenkinsfile
@@ -58,7 +58,7 @@ jobs:
       - name: Jenkins pipeline in the container
         id: jenkins_pipeline_container
         uses:
-          Cr1t-GYM/jenkins-action-poc/jfr-container-action@master
+          jenkinsci/jfr-container-action@master
         with:
           command: run
           jenkinsfile: Jenkinsfile
@@ -81,7 +81,7 @@ jobs:
       - name: Jenkins pipeline with the static image
         id: jenkins_pipeline_image
         uses:
-          Cr1t-GYM/jenkins-action-poc/jfr-static-image-action@master
+          jenkinsci/jfr-static-image-action@master
         with:
           command: run
           jenkinsfile: Jenkinsfile
@@ -90,7 +90,7 @@ jobs:
 ```
 
 ## Runtime action
-This case is realized by the combination of jenkins-setup, jenkins-plugin-installation-action and jenkinsfile-runner-action. It will download all the dependencies and run the pipeline at the host machine directly. Its advantage is that it can support Linux, macOS and Windows runners. Its main disadvantage is the possibility of suffering from a plugins.jenkins.io outage.
+This case is realized by the combination of jfr-setup-action, jfr-plugin-installation-action and jfr-runtime-action. It will download all the dependencies and run the pipeline at the host machine directly. Its advantage is that it can support Linux, macOS and Windows runners. Its main disadvantage is the possibility of suffering from a plugins.jenkins.io outage.
 ```yaml
 name: Java CI
 on: [push]
@@ -106,15 +106,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name : Setup Jenkins
-        uses: Cr1t-GYM/jenkins-action-poc/jenkins-setup
+        uses: jenkinsci/jfr-setup-action@master
       - name: Jenkins plugins download
         id: jenkins_plugins_download
-        uses: Cr1t-GYM/jenkins-action-poc/jenkins-plugin-installation-action
+        uses: jenkinsci/jfr-plugin-installation-action@master
         with:
-          pluginstxt: jenkins-setup/plugins.txt
+          pluginstxt: plugins.txt
       - name: Run Jenkins pipeline
         id: run_jenkins_pipeline
-        uses: Cr1t-GYM/jenkins-action-poc/jenkinsfile-runner-action
+        uses: jenkinsci/jfr-runtime-action@master
         with:
           command: run
           jenkinsfile: Jenkinsfile

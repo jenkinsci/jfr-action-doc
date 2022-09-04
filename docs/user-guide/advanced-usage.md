@@ -32,7 +32,7 @@ This feature is only available in `jfr-container-action`. By default, the plugin
       - name: Jenkins pipeline in the container
         id: jenkins_pipeline_container
         uses:
-          Cr1t-GYM/jenkins-action-poc/jfr-container-action@master
+          jenkinsci/jfr-container-action@master
         with:
           command: run
           jenkinsfile: Jenkinsfile
@@ -49,7 +49,7 @@ Log uploading example for `jfr-container-action`.
       - name: Jenkins pipeline in the container
         id: jenkins_pipeline_container
         uses:
-          Cr1t-GYM/jenkins-action-poc/jfr-container-action@master
+          jenkinsci/jfr-container-action@master
         with:
           command: run
           jenkinsfile: Jenkinsfile
@@ -67,7 +67,7 @@ Log uploading example for `jfr-static-image-action`.
       - name: Jenkins pipeline with the static image
         id: jenkins_pipeline_image
         uses:
-          Cr1t-GYM/jenkins-action-poc/jfr-static-image-action@master
+          jenkinsci/jfr-static-image-action@master
         with:
           command: run
           jenkinsfile: Jenkinsfile
@@ -87,7 +87,7 @@ This feature is only available in `jfr-static-image-action`. You can specify the
       - name: Jenkins pipeline with the static image
         id: jenkins_pipeline_base_image
         uses:
-          ./jfr-static-image-action
+          jenkinsci/jfr-static-image-action@master
         env:
           JENKINS_AWS_KEY: 123456
         with:

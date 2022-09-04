@@ -6,4 +6,4 @@ nav_order: 7
 ---
 
 # A small demo about how to use these actions
-The [Demo project](https://github.com/Cr1t-GYM/JekinsTest) can teach you how to build a SpringBoot project with these actions.
+The [Demo project](https://github.com/jenkinsci/jfr-action-demo) can teach you how to use these actions.
