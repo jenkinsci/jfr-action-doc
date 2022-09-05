@@ -37,20 +37,20 @@ nav_order: 4
    - uses: actions/checkout@v2
    ```
    4. Call the Jenkinsfile-runner actions.
-      1. If you use jfr-container-action, you need to call `Cr1t-GYM/jenkins-action-poc/jfr-container-action@master` and give necessary inputs.
+      1. If you use jfr-container-action, you need to call `jenkinsci/jfr-container-action@master` and give necessary inputs.
       ```yaml
       uses:
-        Cr1t-GYM/jenkins-action-poc/jfr-container-action@master
+        jenkinsci/jfr-container-action@master
       with:
         command: run
         jenkinsfile: Jenkinsfile
         pluginstxt: plugins.txt
         jcasc: jcasc.yml      
       ```
-      2.  If you use jfr-static-image-action, you need to call `Cr1t-GYM/jenkins-action-poc/jfr-static-image-action@master` and give necessary inputs. See the [examples](#example-workflows) for these two actions.
+      2.  If you use jfr-static-image-action, you need to call `jenkinsci/jfr-static-image-action@master` and give necessary inputs. See the [examples](#example-workflows) for these two actions.
       ```yaml
       uses:
-        Cr1t-GYM/jenkins-action-poc/jfr-container-action@master
+        jenkinsci/jfr-container-action@master
       with:
         command: run
         jenkinsfile: Jenkinsfile
@@ -76,39 +76,39 @@ nav_order: 4
           steps:
             - uses: actions/checkout@v2           
    ```      
-   3. Set up the Jenkins environment by using `Cr1t-GYM/jenkins-action-poc/jenkins-setup@master`.
+   1. Set up the Jenkins environment by using `jenkinsci/jfr-setup-action@master`.
    ```yaml
     jobs:
         job-name:
           runs-on: ubuntu-latest
           steps:
             - uses: actions/checkout@v2
-            - uese: Cr1t-GYM/jenkins-action-poc/jenkins-setup@master           
+            - uese: jenkinsci/jfr-setup-action@master           
    ```    
-   4. Install extra plugins by using `Cr1t-GYM/jenkins-action-poc/jenkins-plugin-installation-action@master`. This step is optional.
+   1. Install extra plugins by using `jenkinsci/jfr-plugin-installation-action@master`. This step is optional.
    ```yaml
     jobs:
         job-name:
           runs-on: ubuntu-latest
           steps:
             - uses: actions/checkout@v2
-            - uese: Cr1t-GYM/jenkins-action-poc/jenkins-setup@master
-            - uses: Cr1t-GYM/jenkins-action-poc/jenkins-plugin-installation-action@master
+            - uese: jenkinsci/jfr-setup-action@master
+            - uses: jenkinsci/jfr-plugin-installation-action@master
               with:
-                pluginstxt: jenkins-setup/plugins.txt                     
+                pluginstxt: plugins.txt                     
    ```   
-   5. Run the Jenkins pipeline by using `Cr1t-GYM/jenkins-action-poc/jenkinsfile-runner-action@master`.
+   1. Run the Jenkins pipeline by using `jenkinsci/jfr-runtime-action@master`.
    ```yaml
     jobs:
         job-name:
           runs-on: ubuntu-latest
           steps:
             - uses: actions/checkout@v2
-            - uese: Cr1t-GYM/jenkins-action-poc/jenkins-setup@master
-            - uses: Cr1t-GYM/jenkins-action-poc/jenkins-plugin-installation-action@master
+            - uese: jenkinsci/jfr-setup-action@master
+            - uses: jenkinsci/jfr-plugin-installation-action@master
               with:
-                pluginstxt: jenkins-setup/plugins.txt
-            - uses: Cr1t-GYM/jenkins-action-poc/jenkinsfile-runner-action@master
+                pluginstxt: plugins.txt
+            - uses: jenkinsci/jfr-runtime-action@master
               with:
                 command: run
                 jenkinsfile: Jenkinsfile

@@ -13,8 +13,8 @@ You can configure the pipeline environment by using other GitHub Actions or prov
 
 ## How you can access these actions in your project?
 Reference these actions in your workflow definition.
-1. Cr1t-GYM/jenkins-action-poc/jenkins-plugin-installation-action@master
-2. Cr1t-GYM/jenkins-action-poc/jenkinsfile-runner-action@master
-3. Cr1t-GYM/jenkins-action-poc/jenkins-setup@master
-4. Cr1t-GYM/jenkins-action-poc/jfr-container-action@master
-5. Cr1t-GYM/jenkins-action-poc/jfr-static-image-action@master
+1. jenkinsci/jfr-plugin-installation-action@master
+2. jenkinsci/jfr-runtime-action@master
+3. jenkinsci/jfr-setup-action@master
+4. jenkinsci/jfr-container-action@master
+5. jenkinsci/jfr-static-image-action@master

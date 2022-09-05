@@ -37,7 +37,7 @@ These inputs are provided by our container actions.
 | `baseImage` | String | N/A | You can choose your base runtime here. By default, it will pull the Jenkinsfile-runner jdk11 prebuilt container as runtime. |
 
 ## Runtime Actions Inputs
-### jenkins-setup
+### jfr-setup-action
 
 | Name | Type | Default Value | Description |
 | ----------- | ----------- | ----------- | ----------- |
@@ -49,13 +49,13 @@ These inputs are provided by our container actions.
 | `jenkins-core-url` | String | [Jenkins update center](https://updates.jenkins.io/download/war/2.346.1/jenkins.war) | The download url of Jenkins war package. |
 | `jenkins-jfr-url` | String | [Jenkinsfile-runner GitHub release](https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip) | The download url of Jenkinsfile-runner. |
 
-### jenkins-plugin-installation-action
+### jfr-plugin-installation-action
 
 | Name | Type | Default Value | Description |
 | ----------- | ----------- | ----------- | ----------- |
 | `pluginstxt` | String | plugins.txt | The relative path to plugins list file. |
 
-### jenkinsfile-runner-action
+### jfr-runtime-action
 
 | Name | Type | Default Value | Description |
 | ----------- | ----------- | ----------- | ----------- |
