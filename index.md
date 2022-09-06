@@ -6,7 +6,7 @@ permalink: /
 ---
 
 # Jenkinsfile-runner actions documentation
-[View it on GitHub](https://jenkinsci.github.io/jfr-action-doc/){: .btn .fs-5 .mb-4 .mb-md-0 }
+[View it on GitHub](https://github.com/jenkinsci/jfr-action-doc){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 **Hello Jenkinsfile-runner actions!**
