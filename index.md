@@ -12,7 +12,7 @@ permalink: /
 **Hello Jenkinsfile-runner actions!**
 
 This is the project page of Jenkinsfile-runner Actions.
-Jenkinsfile-runner Actions intends to design suitable GitHub Actions for users so Jenkins pipeline can be run in the GitHub Actions' runners.
+Jenkinsfile-runner Actions intends to be a design suitable for GitHub Actions so the Jenkins pipeline can be run in the GitHub Actions' runners.
 
 To launch the pipeline, you only need to provided the Jenkinsfile and simply quote our actions in your workflow definition.
 The pipeline results can be viewed in the GitHub pages.
