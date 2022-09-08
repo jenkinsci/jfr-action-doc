@@ -16,7 +16,7 @@ Jenkinsfile-runner Actions intends to be a design suitable for GitHub Actions so
 
 To launch the pipeline, you only need to provided the Jenkinsfile and simply quote our actions in your workflow definition.
 The pipeline results can be viewed in the GitHub pages.
-You can also configure your ephemeral Jenkins instances by providing JCasC file, prebuilt container urls or combine with other GitHub Actions!
+You can also configure your ephemeral Jenkins instances by providing a suitable JCasC file or a set of prebuilt container urls, or by combining with other GitHub Actions.
 
 Some related contents about this project are helpful:
 * [Jenkinsfile Runner Action for GitHub Actions project page](https://www.jenkins.io/projects/gsoc/2022/projects/jenkinsfile-runner-action-for-github-actions/)
