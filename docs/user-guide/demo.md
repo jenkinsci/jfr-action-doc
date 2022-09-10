@@ -11,7 +11,7 @@ The [Demo project](https://github.com/jenkinsci/jfr-action-demo) can teach you h
 ## Language Demos
 
 The following demos define the best practice of compiling your projects by using Jenkinsfile-runner Actions.
-After inspiration of these demos, you can choose the most suitable actions for your project.
+After going through these demos to get inspiration, you can choose the most suitable actions for your project.
 
 * [Java demo](https://github.com/jenkinsci/jfr-action-demo/blob/master/demo/java): How to compile a Java Spring Boot project.
 * [JavaScript demo](https://github.com/jenkinsci/jfr-action-demo/blob/master/demo/javascript/my-react-app): How to compile a React project.
