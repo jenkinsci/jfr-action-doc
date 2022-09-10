@@ -20,7 +20,7 @@ After going through these demos to get inspiration, you can choose the most suit
 ## Advanced Usage
 
 The following examples show how to configure your ephemeral Jenkins instances and plugins.
-Each of them needs to set up [JCasC](https://github.com/jenkinsci/configuration-as-code-plugin).
+Each of them needs [JCasC](https://github.com/jenkinsci/configuration-as-code-plugin) to be set up.
 If you want to debug new JCasC settings, testing in your local Jenkins controller is highly recommended.
 After local testing, you can directly copy the related JCasC for your ephemeral Jenkins instance on the GitHub Actions runners.
 
